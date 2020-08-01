@@ -4,7 +4,7 @@
 
 ### 	1-of-N Encoding
 
-		- 每种文字各占一种编码
+每种文字各占一种编码
 
 ​		apple=[1 0 0]
 
@@ -26,84 +26,85 @@
 
   由向量表示词汇，相似词汇向量相似
 
-  ### A word can have multiple senses
+### A word can have multiple senses
 
-  一词多义，给予该词不同含义不同的Embedding
+一词多义，给予该词不同含义不同的Embedding
 
-  **Contextualized Word Embedding**
+**Contextualized Word Embedding**
 
-  #### Embeddings from Language Model(ELMO)
+#### Embeddings from Language Model(ELMO)
 
-  RNN结构，根据上文预测下一个token，逆向亦可
+RNN结构，根据上文预测下一个token，逆向亦可
 
-  ![image-20200801201838988](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801201838988.png)
+![image-20200801201838988](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801201838988.png)
 
-  其深层结构如上，将每个词汇的所有embedding加权求和来确定当前使用哪种embedding，权重α为学习内容
+其深层结构如上，将每个词汇的所有embedding加权求和来确定当前使用哪种embedding，权重α为学习内容
 
-  #### Bidirectional Encoder Representations from Transformers(BERT)
+#### Bidirectional Encoder Representations from Transformers(BERT)
 
-  **self attention**
+**self attention**
 
-  BERT=Encoder of Transformer
+BERT=Encoder of Transformer
 
-  输入一句话，输出该句各**字**的embedding
+输入一句话，输出该句各**字**的embedding
 
-  *review of transformer*
+*review of transformer*
 
-  ![image-20200801202515232](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801202515232.png)
+![image-20200801202515232](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801202515232.png)
 
-  BERT
+BERT
 
-  ![image-20200801202546394](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801202546394.png)
+![image-20200801202546394](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801202546394.png)
 
-  - 训练方法1
+- 训练方法1
 
-    输入两个句子，预测这两句是否接在一起
+  输入两个句子，预测这两句是否接在一起
 
-    [SEP]=the boundary of two sentences两句的距离
+  [SEP]=the boundary of two sentences两句的距离
 
-    [CLS]=the position that outputs classification results 代表分类，如二元YES\NO GOOD\BAD
+  [CLS]=the position that outputs classification results 代表分类，如二元YES\NO GOOD\BAD
 
-    ![image-20200801203551018](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801203551018.png)
+  ![image-20200801203551018](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801203551018.png)
 
-  - 训练方法2
+- 训练方法2
 
-    挖空，将输入的其中某个字masked，然后预测该mask的embedding
+  挖空，将输入的其中某个字masked，然后预测该mask的embedding
 
-    ![image-20200801203013372](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801203013372.png)
+  ![image-20200801203013372](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801203013372.png)
 
-    实际训练中两种方法同时使用
+  实际训练中两种方法同时使用
 
-    ![image-20200801204153079](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801204153079.png)
+  ![image-20200801204153079](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801204153079.png)
 
-    D代表文章有N个token，Q代表问题有M个token，输出答案在第s-e个token之间
+  D代表文章有N个token，Q代表问题有M个token，输出答案在第s-e个token之间
 
-    ![image-20200801204422004](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801204422004.png)
+  ![image-20200801204422004](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801204422004.png)
 
-    具体BERT每层(layer)学习了什么
+  具体BERT每层(layer)学习了什么
 
-    参考[文献](https://arxiv.org/abs/1905.05950)
+  参考[文献](https://arxiv.org/abs/1905.05950)
 
-    #### Enhanced Representation through Knowledge Integration(ERNIE)
+  ### 
 
-    专为中文设计，mask时mask一个词汇而非单字
+#### Enhanced Representation through Knowledge Integration(ERNIE)
 
-    #### Generative Pre-Traning(GPT)
+专为中文设计，mask时mask一个词汇而非单字
 
-    所需参数为BERT的5倍
+#### Generative Pre-Traning(GPT)
 
-    GPT=Decoder of Transformer(同样为self attention)
+所需参数为BERT的5倍
 
-    ![image-20200801205603015](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801205603015.png)
+GPT=Decoder of Transformer(同样为self attention)
 
-    可以做到不需要大量训练集即可**Zero-shot Learning**
+![image-20200801205603015](C:\Users\Archer\AppData\Roaming\Typora\typora-user-images\image-20200801205603015.png)
 
-    ~~一个有趣的网站，可惜下架了:(~~
+可以做到不需要大量训练集即可**Zero-shot Learning**
 
-    [GPT2](talktotransformer.com)
+~~一个有趣的网站，可惜下架了:(~~
 
-    
+[GPT2](talktotransformer.com)
 
-  
 
-  
+
+
+
