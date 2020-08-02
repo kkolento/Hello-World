@@ -22,7 +22,7 @@
 
 - Word Embedding
 
-  ![Word Embedding](https://github.com/kkolento/Hello-World/tree/master/lesson/DeepLearning/DEEP_L_25P.assets)
+  ![Word Embedding](./DEEP_L_25P.assets/image-20200801200735324.png)
 
   由向量表示词汇，相似词汇向量相似
 
