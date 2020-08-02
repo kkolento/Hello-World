@@ -36,7 +36,7 @@
 
 RNN结构，根据上文预测下一个token，逆向亦可
 
-![ELMO](./DEEP_L_25P.assets/image-20200801201838988.png)
+![ELMO](https://raw.githubusercontent.com/kkolento/Hello-World/master/lesson/DeepLearning/DEEP_L_25P.assets/image-20200801201838988.png)
 
 其深层结构如上，将每个词汇的所有embedding加权求和来确定当前使用哪种embedding，权重α为学习内容
 
