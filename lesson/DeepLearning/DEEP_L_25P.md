@@ -22,7 +22,7 @@
 
 - Word Embedding
 
-  ![Word Embedding](https://github.com/kkolento/Hello-World/raw/master/lesson/DeepLearning/DEEP_L_25P.md)
+  ![Word Embedding](https://github.com/kkolento/Hello-World/tree/master/lesson/DeepLearning/DEEP_L_25P.assets)
 
   由向量表示词汇，相似词汇向量相似
 
@@ -36,7 +36,7 @@
 
 RNN结构，根据上文预测下一个token，逆向亦可
 
-![ELMO](https://raw.githubusercontent.com/kkolento/Hello-World/master/lesson/DeepLearning/DEEP_L_25P.assets/image-20200801201838988.png)
+![ELMO](./DEEP_L_25P.assets/image-20200801201838988.png)
 
 其深层结构如上，将每个词汇的所有embedding加权求和来确定当前使用哪种embedding，权重α为学习内容
 
