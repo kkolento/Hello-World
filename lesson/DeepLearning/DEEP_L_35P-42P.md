@@ -48,7 +48,7 @@ $$
 
 只在乎方向，不在乎大小，可以做到只进行一次就可实现attack
 
-![FGSM](C:%5CUsers%5CArcher%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200803211055141.png)
+![FGSM](https://cdn.jsdelivr.net/gh/kkolento/images/20200803214927.png)
 
 但想实现attack，需要得到神经网络的参数才能计算
 
