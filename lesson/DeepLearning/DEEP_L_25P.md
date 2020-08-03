@@ -22,7 +22,7 @@
 
 - Word Embedding
 
-  ![Word Embedding](./DEEP_L_25P.assets/image-20200801200735324.png)
+  ![Word Embedding](https://github.com/kkolento/Hello-World/tree/master/lesson/DeepLearning/DEEP_L_25P.assets)
 
   由向量表示词汇，相似词汇向量相似
 
@@ -36,7 +36,7 @@
 
 RNN结构，根据上文预测下一个token，逆向亦可
 
-![ELMO](./DEEP_L_25P.assets/image-20200801201838988.png)
+![ELMO](https://raw.githubusercontent.com/kkolento/images/master/20200803121137.png)
 
 其深层结构如上，将每个词汇的所有embedding加权求和来确定当前使用哪种embedding，权重α为学习内容
 
@@ -50,11 +50,11 @@ BERT=Encoder of Transformer
 
 *review of transformer*
 
-![Transformer](./DEEP_L_25P.assets/image-20200801202515232.png)
+![Transformer](https://raw.githubusercontent.com/kkolento/images/master/20200803121146.png)
 
 BERT
 
-![BERT](./DEEP_L_25P.assets/image-20200801202546394.png)
+![BERT](https://raw.githubusercontent.com/kkolento/images/master/20200803121158.png)
 
 - 训练方法1
 
@@ -64,21 +64,21 @@ BERT
 
   [CLS]=the position that outputs classification results 代表分类，如二元YES\NO GOOD\BAD
 
-  ![example1](./DEEP_L_25P.assets/image-20200801203551018.png)
+  ![example1](https://raw.githubusercontent.com/kkolento/images/master/20200803121204.png)
 
 - 训练方法2
 
   挖空，将输入的其中某个字masked，然后预测该mask的embedding
 
-  ![example2](./DEEP_L_25P.assets/image-20200801203013372.png)
+  ![example2](https://raw.githubusercontent.com/kkolento/images/master/20200803121213.png)
 
   实际训练中两种方法同时使用
 
-  ![example3](./DEEP_L_25P.assets/image-20200801204153079.png)
+  ![example3](https://raw.githubusercontent.com/kkolento/images/master/20200803121220.png)
 
   D代表文章有N个token，Q代表问题有M个token，输出答案在第s-e个token之间
 
-  ![example4](./DEEP_L_25P.assets/image-20200801204422004.png)
+  ![example4](https://raw.githubusercontent.com/kkolento/images/master/20200803121226.png)
 
   具体BERT每层(layer)学习了什么
 
@@ -95,7 +95,7 @@ BERT
 
 GPT=Decoder of Transformer(同样为self attention)
 
-![GPT](./DEEP_L_25P.assets/image-20200801205603015.png)
+![GPT](https://raw.githubusercontent.com/kkolento/images/master/20200803121233.png)
 
 可以做到不需要训练集即可**Zero-shot Learning**
 
