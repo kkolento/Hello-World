@@ -1,4 +1,4 @@
-# DEEP_L_45P-50P
+# ML_45P-50P
 
 ## Network Compression
 
